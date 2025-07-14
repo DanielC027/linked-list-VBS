@@ -10,6 +10,8 @@
                 AddPerson()
             ElseIf op Like "2" Then
                 ShowPeople()
+            ElseIf op Like "3" Then
+                UpdatePerson()
             ElseIf op Like "0" Then
                 Console.WriteLine("Exit...")
             Else
@@ -50,11 +52,36 @@
         Console.WriteLine(Me.listRef.ShowPeopleList())
     End Sub
 
+    Sub UpdatePerson()
+        ClearScreen()
+        Dim Nme As String
+
+        Dim NewNme As String
+        Dim NewAge As Integer
+
+        Dim Prsn = New Person()
+
+        Console.WriteLine("  UPDATE PEOPLE")
+        Console.Write("Introduce the name of the person to update: ")
+        Nme = Console.ReadLine()
+
+        Console.Write("Introduce the new name: ")
+        NewNme = Console.ReadLine()
+        Prsn.SetName(NewNme)
+
+        Console.Write("Introduce the new age: ")
+        NewAge = Console.ReadLine()
+        Prsn.SetAge(NewAge)
+
+        Me.listRef.UpdatePerson(Nme, Prsn)
+
+    End Sub
     Function GetOption()
         Dim op As String
         Console.WriteLine("  PEOPLE LIST")
         Console.WriteLine("1) Add person")
         Console.WriteLine("2) Show people list")
+        Console.WriteLine("3) Update person")
         Console.WriteLine("0) exit")
         Console.Write("Choose an option: ")
         op = Console.ReadLine()

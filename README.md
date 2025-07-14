@@ -21,6 +21,7 @@ La estructura de la lista ligada fue implementada manualmente mediante nodos enl
 
 - Agregar personas a la lista
 - Mostrar todas las personas
+- Actualizar informacion de persona
 
 ## 🛠️ Tecnologías
 
@@ -37,5 +38,5 @@ La estructura de la lista ligada fue implementada manualmente mediante nodos enl
 
 3. Ejecuta el proyecto (F5) y sigue las instrucciones en la consola.
 
-### 📄 Licencia
+## 📄 Licencia
 Este proyecto es de uso libre bajo la licencia MIT.

@@ -37,6 +37,21 @@
         Return str
     End Function
 
+    Public Sub UpdatePerson(Nme As String, Prsn As Person)
+        Dim Aux = Me.Anchor
+
+        If IsEmptyList() <> True Then
+            While Aux IsNot Nothing
+                If Aux.GetPerson().GetName() Like Nme Then
+                    Aux.SetPerson(Prsn)
+                    Aux = Nothing
+                Else
+                    Aux = Aux.GetNextNode()
+                End If
+            End While
+        End If
+    End Sub
+
     Public Function IsEmptyList()
         Return Me.Anchor Is Nothing
     End Function
