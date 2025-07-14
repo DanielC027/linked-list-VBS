@@ -31,7 +31,7 @@ La estructura de la lista ligada fue implementada manualmente mediante nodos enl
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tuusuario/PeopleList.git
+   git clone https://github.com/DanielC027/linked-list-VBS.git
 
 2. Abre el archivo PeopleList.sln con Visual Studio.
 
